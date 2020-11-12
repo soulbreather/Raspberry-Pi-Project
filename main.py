@@ -1,5 +1,6 @@
 # Raspberry Pi Project
 from grove.factory import Factory
+import getNews
 
 run = True
 pin = 12
