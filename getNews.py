@@ -20,6 +20,3 @@ def getFakeNewsHeadline():
    headlineNumber = random.randint(0, len(fakeNewsList) - 1)
 
    return fakeNewsList[headlineNumber]
-
-for i in range (0,10):
-   print(getFakeNewsHeadline())
