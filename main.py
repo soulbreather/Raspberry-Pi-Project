@@ -1,13 +1,16 @@
 # Raspberry Pi Project
-from grove.factory import Factory
+from grovepi import *
+import time
 import getNews
 
+engine = pyttsx3.init()
 run = True
-pin = 12
-button = Factory.getButton("GPIO-HIGH", pin)
+button = 3
 
-while run:
-    if button.is_pressed():
-        print('Button is pressed')
-    else:
-        print('Button is released')
+
+while True:
+    if(digitalRead(button)):
+        time.sleep(0.1)
+        print("button was pressed")
+        engine.say(getNews)
+        engine.runAndWait()
