@@ -7,7 +7,7 @@ import pyttsx3
 engine = pyttsx3.init()
 run = True
 button1 = 3
-button2 = 4
+button2 = 6
 realNews = getNews.getNewsHeadline()
 fakeNews = getNews.getFakeNewsHeadline()
 
