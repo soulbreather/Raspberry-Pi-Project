@@ -1,5 +1,5 @@
 # Raspberry Pi Project
-#from grovepi import *
+from grovepi import *
 import time
 import getNews
 import pyttsx3
