@@ -17,6 +17,9 @@ def getNewsHeadline():
 def getFakeNewsHeadline():
    fakeNewsFile = open('FakeNews.txt', 'r', encoding='utf8')
    fakeNewsList = fakeNewsFile.readlines()
-   headlineNumber = random.randint(0, len(fakeNewsList - 1))
+   headlineNumber = random.randint(0, len(fakeNewsList) - 1)
 
    return fakeNewsList[headlineNumber]
+
+for i in range (0,10):
+   print(getFakeNewsHeadline())
