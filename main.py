@@ -7,6 +7,7 @@ engine = pyttsx3.init()
 run = True
 button = 3
 
+print("fake or not game is running")
 
 while True:
     if(digitalRead(button)):
