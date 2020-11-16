@@ -15,7 +15,7 @@ def getNewsHeadline():
     return response.json()["articles"][articleNumber]["title"]
 
 def getFakeNewsHeadline():
-   fakeNewsFile = open('/FakeNews.txt', 'r', encoding='utf8')
+   fakeNewsFile = open('/home/pi/Raspberry-Pi-Project/FakeNews.txt', 'r', encoding='utf8')
    fakeNewsList = fakeNewsFile.readlines()
    headlineNumber = random.randint(0, len(fakeNewsList) - 1)
 
