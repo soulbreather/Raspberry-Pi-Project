@@ -18,13 +18,13 @@ print("fake or not game is running")
 
 while True:
     if(digitalRead(button1)):
-        time.sleep(0.01)
+        time.sleep(0.1)
         print("button 1 was pressed")
         engine.say(realNews)
         engine.runAndWait()
 
     if(digitalRead(button2)):
-        time.sleep(0.01)
+        time.sleep(0.1)
         print("button 2 was pressed")
         engine.say(fakeNews)
         engine.runAndWait()
