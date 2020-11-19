@@ -11,8 +11,6 @@ button2 = 6
 realNews = getNews.getNewsHeadline()
 fakeNews = getNews.getFakeNewsHeadline()
 
-print(realNews)
-print(fakeNews)
 
 print("fake or not game is running")
 
