@@ -47,7 +47,7 @@ setText("Score: " + str(score) + "\n" + "Highscore: " + str(highscore))
 while run:
     while (digitalRead(button_read) or digitalRead(button_fake) or digitalRead(button_real)):
         # print("I am inside")
-        print(score)
+        # print(score)
         setText("Score: " + str(score) + "\n" + "Highscore: " + str(highscore))
         if(digitalRead(button_read)):
             time.sleep(0.1)
@@ -82,7 +82,6 @@ while run:
                 engine.runAndWait()
                 
             else:
-                
                 highscore = changeHighscore(int(score), int(highscore))
                 score = 0
                 engine.say(too_bad)
