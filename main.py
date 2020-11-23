@@ -79,7 +79,8 @@ while run:
                 engine.runAndWait()
                 
             else:
-                highscore = changeHighscore(score, highscore)
+                print(highscore, score)
+                highscore = changeHighscore(int(score), int(highscore))
                 score = 0
                 engine.say(too_bad)
                 engine.runAndWait()
