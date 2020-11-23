@@ -49,6 +49,7 @@ while run:
             print("the news will be read")
             engine.say(selected_news)
             engine.runAndWait()
+            time.sleep(0.5)
             
 
         if(digitalRead(button_real)):
@@ -65,6 +66,7 @@ while run:
                 engine.say(too_bad)
                 engine.runAndWait()
             selected_news, real_or_fake = newsselector()
+            time.sleep(0.5)
 
         if(digitalRead(button_fake)):
             time.sleep(0.1)
@@ -80,4 +82,5 @@ while run:
                 engine.say(too_bad)
                 engine.runAndWait()
             selected_news, real_or_fake = newsselector()
+            time.sleep(0.5)
 
