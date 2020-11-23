@@ -45,6 +45,7 @@ print("The Fake or Real Game is running")
 setText("Score: " + str(score) + "\n" + "Highscore: " + str(highscore))
 
 while run:
+    print("i am still running")
     while (digitalRead(button_read) or digitalRead(button_fake) or digitalRead(button_real)):
         # print("I am inside")
         # print(score)
