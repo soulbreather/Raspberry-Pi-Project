@@ -15,6 +15,9 @@ highscore_file = open("highscore.txt","w+")
 highscore = highscore_file.read()
 score = 0
 
+if(highscore == ""):
+    highscore = 0
+
 congrats = "Congratulations you were right!"
 too_bad = "Too bad, you were wrong!"
 
@@ -79,7 +82,7 @@ while run:
                 engine.runAndWait()
                 
             else:
-                print(highscore, score)
+                
                 highscore = changeHighscore(int(score), int(highscore))
                 score = 0
                 engine.say(too_bad)
