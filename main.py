@@ -11,12 +11,12 @@ run = True
 button_read = 3
 button_real = 6
 button_fake = 5
-highscore_file = open("highscore.txt","w+")
+highscore_file = open("highscore.txt", "w+")
 highscore = highscore_file.read()
 score = 0
 
 rate = engine.getProperty('rate')   # getting details of current speaking rate
-engine.setProperty('rate', 50)     # setting up new voice rate
+engine.setProperty('rate', 80)     # setting up new voice rate
 
 if(highscore == ""):
     highscore = 0
@@ -26,7 +26,7 @@ too_bad = "Too bad, you were wrong!"
 
 
 def newsselector():
-    selected_news = random.randint(0,1)
+    selected_news = random.randint(0, 1)
     if(selected_news == 0):
         news_to_be_read = getNews.getNewsHeadline()
         real_or_fake = "real"
@@ -36,13 +36,16 @@ def newsselector():
 
     return news_to_be_read, real_or_fake
 
+
 selected_news, real_or_fake = newsselector()
+
 
 def changeHighscore(score, highscore):
     if(int(score) > int(highscore)):
         highscore_file.write(str(score))
         highscore = score
     return highscore
+
 
 print("The Fake or Real Game is running")
 setText("Score: " + str(score) + "\n" + "Highscore: " + str(highscore))
@@ -59,7 +62,6 @@ while run:
             engine.say(selected_news)
             engine.runAndWait()
             time.sleep(0.5)
-            
 
         if(digitalRead(button_real)):
             time.sleep(0.1)
@@ -68,7 +70,7 @@ while run:
                 score += 1
                 engine.say(congrats)
                 engine.runAndWait()
-                
+
             else:
                 highscore = changeHighscore(score, highscore)
                 score = 0
@@ -84,7 +86,7 @@ while run:
                 score += 1
                 engine.say(congrats)
                 engine.runAndWait()
-                
+
             else:
                 highscore = changeHighscore(int(score), int(highscore))
                 score = 0
@@ -93,4 +95,3 @@ while run:
             selected_news, real_or_fake = newsselector()
             time.sleep(0.5)
         setText("Score: " + str(score) + "\n" + "Highscore: " + str(highscore))
-
