@@ -11,8 +11,18 @@ run = True
 button_read = 3
 button_real = 6
 button_fake = 5
-highscore_file = open("highscore.txt", "wb")
-highscore = highscore_file.read()
+
+try:
+    highscore_file = open("highscore.txt", "r")
+    highscore = highscore_file.read()
+    highscore_file.close()
+except:
+    highscore_file = open("highscore.txt", "x")
+    highscore = 0
+    highscore_file.close()
+
+
+
 score = 0
 
 rate = engine.getProperty('rate')   # getting details of current speaking rate
@@ -42,8 +52,10 @@ selected_news, real_or_fake = newsselector()
 
 def changeHighscore(score, highscore):
     if(int(score) > int(highscore)):
+        highscore_file = open("highscore.txt", "w")
         highscore_file.write(str(score))
         highscore = score
+        highscore_file.close()
     return highscore
 
 
