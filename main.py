@@ -16,7 +16,7 @@ highscore = highscore_file.read()
 score = 0
 
 rate = engine.getProperty('rate')   # getting details of current speaking rate
-engine.setProperty('rate', 80)     # setting up new voice rate
+engine.setProperty('rate', 100)     # setting up new voice rate
 
 if(highscore == ""):
     highscore = 0
