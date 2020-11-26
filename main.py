@@ -11,7 +11,7 @@ run = True
 button_read = 3
 button_real = 6
 button_fake = 5
-highscore_file = open("highscore.txt", "w")
+highscore_file = open("highscore.txt", "wb")
 highscore = highscore_file.read()
 score = 0
 
